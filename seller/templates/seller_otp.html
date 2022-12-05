@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+	<br><br>
+	<h3>Email Verification</h3>
+	</a>
+	<br><br>
+	<form action="{% url 'seller_otp' %}" method="post">
+        {% csrf_token %}
+        {{msg}}
+        <br><br>
+		<input type="text" placeholder="Enter Your OTP" name="u_otp" required="">
+		<br><br>
+		<input type="submit" value="Verify">
+		<br><br>
+	</form>
+</center>
+
+{% endblock %}

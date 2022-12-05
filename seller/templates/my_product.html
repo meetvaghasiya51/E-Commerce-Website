@@ -1,0 +1,32 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        {% for single_product in my_product %}
+
+        <div class="col-lg-4">
+            <div class="item">
+                <div class="thumb">
+                    <img src="{{single_product.pic.url}}" alt="" height="150" width="150">
+                </div>
+                <div class="down-content">
+                    <h4>{{single_product.name}}</h4>
+                    <span>RS {{single_product.price}}</span>
+                </div>
+                <div class="thumb">
+                    <ul>
+                        <li><a href="single-product.html"><i class="fa fa-eye">View Product</i></a></li>
+                        <li><a href="single-product.html"><i class="fa fa-star">Like</i></a></li>
+                        <li><a href="single-product.html"><i class="fa fa-shopping-cart">Add to Cart</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

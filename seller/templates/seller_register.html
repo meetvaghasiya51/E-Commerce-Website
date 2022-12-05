@@ -1,0 +1,32 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+	<br><br>
+	<a href="{% url 'seller_register' %}">
+	<h3>Register</h3>
+	</a>
+	<br><br>
+	<form action="{% url 'seller_register' %}" method="post">
+		{% csrf_token %}
+		<b>{{msg}}</b>
+		<br>
+		<input type="email" placeholder="Enter Your Email" name="email" required="">
+		<br><br>
+		<input type="text" placeholder="Enter Your First Name" name="first_name" required="">
+		<br><br>
+		<input type="text" placeholder="Enter Your Last Name" name="last_name" required="">
+		<br><br>
+		<input type="text" placeholder="Enter Your GST Number" name="gst_number" required="">
+		<br><br>
+		<input type="text" placeholder="Enter Your Password" name="password" required="">
+		<br><br>
+		<input type="text" placeholder="Re-Enter Password" name="repwd" required="">
+		<br><br>
+		<input type="submit" value="Register">
+		<br><br>
+	</form>
+</center>
+
+{% endblock %}

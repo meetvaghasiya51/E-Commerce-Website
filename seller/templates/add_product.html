@@ -1,0 +1,29 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+	<br><br>
+	<h3>Add Product</h3>
+	</a>
+	<br><br>
+	<form action="{% url 'add_product' %}" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<b>{{msg}}</b>
+		<br>
+		<input type="text" placeholder="Enter Product Name" name="name" required="">
+		<br><br>
+		<input type="text" placeholder="Product Description" name="description" required="">
+		<br><br>
+		<input type="text" placeholder="Product Price" name="price" required="">
+		<br><br>
+		<input type="text" placeholder="Quantity" name="quantity" required="">
+		<br><br>
+		<input type="file" placeholder="Enter Product Pic" name="pic" required="">
+		<br><br>
+		<input type="submit" value="Add Product">
+		<br><br>
+	</form>
+</center>
+
+{% endblock %}
