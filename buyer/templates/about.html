@@ -181,6 +181,11 @@ Author URL: http://w3layouts.com
 								gravida felis vitae. Phasellus lacinia id, sunt in culpa quis. Phasellus lacinia</p>
 								<p class="mb-4">Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu ullamcorper. Nunc id ipsum fringilla.</p>
 								<div class="read">
+                  {% if user.email %}
+										<a href="{% url 'cart' %}" class="read-more btn">
+									{% else %}
+										<a href="{% url 'login' %}" class="shop-button btn">
+									{% endif%}
 									<a href="#" class="read-more btn">Shop Now</a>
 								</div>	
 							</div>
@@ -354,7 +359,7 @@ Author URL: http://w3layouts.com
 <!-- features-4 -->
 
 	<!--/team-sec-->
-	<section class="w3l-team-main">
+	<!-- <section class="w3l-team-main">
 		<div class="team py-5">
 			<div class="container py-lg-5">
 					<h3 class="hny-title text-center">
@@ -373,7 +378,7 @@ Author URL: http://w3layouts.com
 								</ul>
 							</div>
 						</div>
-							<!-- end team member -->
+							
 				
 							<div class="col-lg-4 col-sm-6 mb-lg-0 mb-4 team-wrapper position-relative">
 								<a href="#"><img src='{% static "assets/images/team2\.jpg" %}' class="team_member img-fluid" alt="Team Member"></a>
@@ -388,7 +393,7 @@ Author URL: http://w3layouts.com
 									</ul>
 								</div>
 							</div>
-							<!-- end team member -->
+							
 							<div class="col-lg-4 col-sm-6 team-wrapper position-relative">
 								<a href="#"><img src='{% static "assets/images/team3.jpg" %}' class="team_member img-fluid" alt="Team Member"></a>
 								<div class="team_info mt-3 position-absolute">
@@ -402,10 +407,10 @@ Author URL: http://w3layouts.com
 									</ul>
 								</div>
 							</div>
-							<!-- end team member -->
+							
 				</div>
 			</div>
-	</section>
+	</section> -->
 	<!--//team-sec-->
 
 
@@ -437,8 +442,8 @@ Author URL: http://w3layouts.com
                   </div>
 
                   <div class="right-side col-lg-8 pl-lg-5">
-                      <h4>Women's Day Special Offer
-                        All Branded Sandals are Flat 50% Discount</h4>
+                      <!-- <h4>Women's Day Special Offer
+                        All Branded Sandals are Flat 50% Discount</h4> -->
                       <div class="sub-columns">
                           <div class="sub-one-left">
                               <h6>Useful Links</h6>
@@ -459,8 +464,7 @@ Author URL: http://w3layouts.com
 
                           </div>
                           <div class="sub-two-right">
-                              <h6>Our Store</h6>
-                              <p class="mb-5">49436 Broaddus Honey Court Avenue, Madisonville KY 95020, United States of America</p>
+                              
 
                               <h6>We accept:</h6>
                               <ul>
@@ -490,8 +494,7 @@ Author URL: http://w3layouts.com
                       </ul>
                   </div>
                   <div class="columns col-lg-6 text-lg-right">
-                      <p>© 2020 SpryStore. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
-                              W3Layouts</a>
+                      <p>© 2022 SpryStore. All rights reserved. 
                       </p>
                   </div>
                   <button onclick="topFunction()" id="movetop" title="Go to top">

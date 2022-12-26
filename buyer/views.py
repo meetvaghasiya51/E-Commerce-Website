@@ -29,6 +29,9 @@ def about(request):
     return render(request,'about.html')
 
 
+def working(request):
+    return render(request,'working.html')
+    
 def register(request):
     if request.method == 'GET':
         return render(request,'register.html')

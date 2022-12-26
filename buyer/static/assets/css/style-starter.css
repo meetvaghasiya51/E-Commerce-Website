@@ -18897,5 +18897,7 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
+.col-lg-12.text_center.partners {
+  text-align: center;
+}
 /*# sourceMappingURL=style-starter.css.map */

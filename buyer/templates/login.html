@@ -170,6 +170,11 @@ Author URL: http://w3layouts.com
 									<h3>Women's
 										Fashion
 										<br>50% Off</h3>
+									{% if user.email %}
+										<a href="{% url 'cart' %}" class="read-more btn">
+									{% else %}
+										<a href="{% url 'login' %}" class="shop-button btn">
+									{% endif%}
 									<a href="#" class="shop-button btn">
 										Shop Now
 									</a>
@@ -183,6 +188,11 @@ Author URL: http://w3layouts.com
 									<h3>Men's
 										Fashion
 										<br>60% Off</h3>
+									{% if user.email %}
+										<a href="{% url 'cart' %}" class="read-more btn">
+									{% else %}
+										<a href="{% url 'login' %}" class="shop-button btn">
+									{% endif%}
 									<a href="#" class="shop-button btn">
 										Shop Now
 									</a>
@@ -196,6 +206,11 @@ Author URL: http://w3layouts.com
 									<h3>Women's
 										Fashion
 										<br>50% Off</h3>
+									{% if user.email %}
+										<a href="{% url 'cart' %}" class="read-more btn">
+									{% else %}
+										<a href="{% url 'login' %}" class="shop-button btn">
+									{% endif%}
 									<a href="#" class="shop-button btn">
 										Shop Now
 									</a>
@@ -209,6 +224,11 @@ Author URL: http://w3layouts.com
 									<h3>Men's
 										Fashion
 										<br>60% Off</h3>
+									{% if user.email %}
+										<a href="{% url 'cart' %}" class="read-more btn">
+									{% else %}
+										<a href="{% url 'login' %}" class="shop-button btn">
+									{% endif%}
 									<a href="#" class="shop-button btn">
 										Shop Now
 									</a>
@@ -297,8 +317,8 @@ Author URL: http://w3layouts.com
 				</div>
 
 				<div class="right-side col-lg-8 pl-lg-5">
-					<h4>Women's Day Special Offer
-					  All Branded Sandals are Flat 50% Discount</h4>
+					<!-- <h4>Women's Day Special Offer
+					  All Branded Sandals are Flat 50% Discount</h4> -->
 					<div class="sub-columns">
 						<div class="sub-one-left">
 							<h6>Useful Links</h6>
@@ -319,8 +339,7 @@ Author URL: http://w3layouts.com
 
 						</div>
 						<div class="sub-two-right">
-							<h6>Our Store</h6>
-							<p class="mb-5">49436 Broaddus Honey Court Avenue, Madisonville KY 95020, United States of America</p>
+							
 
 							<h6>We accept:</h6>
 							<ul>
@@ -350,8 +369,7 @@ Author URL: http://w3layouts.com
 					</ul>
 				</div>
 				<div class="columns col-lg-6 text-lg-right">
-					<p>© 2020 SpryStore. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
-							W3Layouts</a>
+					<p>© 2022 SpryStore. All rights reserved. 
 					</p>
 				</div>
 				<button onclick="topFunction()" id="movetop" title="Go to top">
